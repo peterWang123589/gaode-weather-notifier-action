@@ -3,8 +3,8 @@ description: "Sends weather notifications based on GaoDe Map Weather API."
 author: "Rubin Wang"
 
 branding:
-   icon: "cloud"
-   color: "blue"
+  icon: "cloud"
+  color: "blue"
 
 inputs:
   #weather api key config
@@ -16,7 +16,6 @@ inputs:
   city:
     description: "城市名称或6位城市编码"
     required: false
-    required: true
 
   #email service config
   smtp_host:
@@ -44,7 +43,7 @@ inputs:
   email_subject:
     description: "邮件主题"
     required: false
-  
+
   sender_name:
     description: "发件人名称"
     required: false
