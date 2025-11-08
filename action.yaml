@@ -1,0 +1,65 @@
+name: "Weather Notification Action"
+description: "Sends weather notifications based on GaoDe Map Weather API."
+author: "Rubin Wang"
+
+branding:
+   icon: "cloud"
+   color: "blue"
+
+inputs:
+  #weather api key config
+  amap_api_key:
+    description: "高德地图API密钥"
+    required: true
+
+  #city code config
+  city:
+    description: "城市名称或6位城市编码"
+    required: false
+    required: true
+
+  #email service config
+  smtp_host:
+    description: "SMTP服务器地址"
+    required: false
+    defalut: "smtp.163.com"
+
+  smtp_port:
+    description: "SMTP服务器端口"
+    required: false
+    default: "465"
+  smtp_user:
+    description: "SMTP用户名(通常为邮箱地址)"
+    required: true
+  smtp_pass:
+    description: "SMTP密码或授权码"
+    required: true
+
+  #recipient email config
+  recipient_emails:
+    description: "接收通知的邮箱地址"
+    required: true
+
+  #email config
+  email_subject:
+    description: "邮件主题"
+    required: false
+  
+  sender_name:
+    description: "发件人名称"
+    required: false
+    default: "天气通知助手"
+
+outputs:
+  status:
+    description: "Action执行状态"
+  message:
+    description: "详细信息或错误消息"
+  weather_data:
+    description: "天气数据json字符串"
+  recipients_count:
+    description: "成功发送通知的收件人数量"
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
