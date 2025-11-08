@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Send Weather Notification
-        uses: peterWang123589/gaode-weather-notifier-action@v1.0.0
+        uses: peterWang123589/gaode-weather-notifier-action@v1.0.1
         with:
           # 天气API配置
           amap_api_key: "31097668d593e70f164137f7eb1664f7"
